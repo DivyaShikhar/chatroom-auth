@@ -1,4 +1,12 @@
-# go-libp2p-pubsub chat example
+# go-libp2p-pubsub chat example Assignment (Authentication)
+
+The app now contains a new feature for authenticating users with password, user have to type the correct password to enter the specific room.
+
+## Features Added
+1. Authentication using SQL
+2. Password based authentication
+
+
 
 This example project builds a chat room application using go-libp2p-pubsub. The app runs in the terminal,
 and uses a text UI to show messages from other peers:
@@ -10,12 +18,8 @@ the details of configuration.
 
 ## Running
 
-Clone this repo, then `cd` into the `examples/pubsub/chat` directory:
+Clone this repo, then `cd` into the `chat` directory:
 
-```shell
-git clone https://github.com/libp2p/go-libp2p
-cd go-libp2p/examples/pubsub/chat
-```
 
 Now you can either run with `go run`, or build and run the binary:
 
@@ -33,11 +37,13 @@ To set a nickname, use the `-nick` flag:
 go run . -nick=zoidberg
 ```
 
-You can join a specific chat room with the `-room` flag:
+You can join a specific chat room with the password with the `-room` flag:
 
 ```shell
-go run . -room=planet-express
+go run . -room=planet-express -password=123
 ```
+
+
 
 It's usually more fun to chat with others, so open a new terminal and run the app again.
 If you set a custom chat room name with the `-room` flag, make sure you use the same one
